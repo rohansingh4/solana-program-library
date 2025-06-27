@@ -1,0 +1,25 @@
+{
+  "name": "gorbchain-token-minter",
+  "version": "1.0.0",
+  "description": "Token minting and transfer script for GorbChain",
+  "main": "mint-and-transfer-token.js",
+  "scripts": {
+    "start": "node mint-and-transfer-token.js",
+    "mint": "node mint-and-transfer-token.js",
+    "install-deps": "npm install"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/spl-token": "^0.3.8",
+    "bs58": "^5.0.0"
+  },
+  "keywords": [
+    "solana",
+    "spl-token",
+    "gorbchain",
+    "blockchain",
+    "token"
+  ],
+  "author": "GorbChain Developer",
+  "license": "MIT"
+} 

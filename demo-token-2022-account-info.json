@@ -1,0 +1,27 @@
+{
+  "tokenAccount": "AADZwmKEasjqrPM7R5Ht8UhnnqexeYtjmuNSRNcRSFP4",
+  "owner": "5RcfMNZFw6JeoCR3RPURWvJeLN7bgPVcEHW5wTeX8dTQ",
+  "mint": "CmbdvB243nG4TEKjGPx7iGGXT4b5mFpynQUghKqF4ENu",
+  "amount": 11,
+  "programId": "2dwpmEaGB8euNCirbwWdumWUZFH3V91mbPjoFbWT24An",
+  "signature": "4k5539Cdg2ihqtDPc9sUAErW7Lor6ZiKUViDbpJpa2ZP7cVVJKHzJLTYFQx2aHLF3WqwTCs774Uh7aEKaroDK6hn",
+  "metadata": {
+    "name": "GorbChain Demo Token",
+    "symbol": "GDEMO",
+    "description": "A demonstration Token-2022 on GorbChain with advanced features",
+    "decimals": 6,
+    "totalSupply": 1200,
+    "creator": "GorbChain Labs",
+    "category": "Utility",
+    "features": [
+      "Extensible",
+      "Upgradeable",
+      "Metadata Support"
+    ],
+    "createdAt": "2025-06-26T23:10:55.766Z",
+    "network": "GorbChain",
+    "version": "2022"
+  },
+  "createdAt": "2025-06-26T23:32:07.337Z",
+  "type": "token-2022-demo-transfer"
+}

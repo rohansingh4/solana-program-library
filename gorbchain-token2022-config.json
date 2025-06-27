@@ -1,0 +1,77 @@
+{
+  "network": {
+    "name": "GorbChain",
+    "rpc": "https://rpc.gorbchain.xyz",
+    "explorer": "https://explorer.gorbchain.xyz",
+    "chainId": "custom-gorbchain"
+  },
+  "programs": {
+    "token2022": "2dwpmEaGB8euNCirbwWdumWUZFH3V91mbPjoFbWT24An",
+    "ata": "BWBbPGpceCtFCUuMFjYUYpHEnagcT58bNi9c44VJ4rkW",
+    "splToken": "8drSBwhdQQTQs68pAddfWyXPv8CA4JhFAY2QRAxwLmSS",
+    "system": "11111111111111111111111111111111"
+  },
+  "tokens": {
+    "GSUP": {
+      "name": "GorbChain Supreme Token",
+      "symbol": "GSUP",
+      "mint": "BNGkFwWsBZ71K5S9s5oqLeTfj55ghvHgPQRYCxd64eNU",
+      "decimals": 9,
+      "description": "The supreme token for GorbChain with Token-2022 support",
+      "totalSupply": 1000000,
+      "creator": "GorbChain Foundation",
+      "website": "https://gorbchain.xyz"
+    }
+  },
+  "instructions": {
+    "CRITICAL_WARNINGS": [
+      "⚠️ DO NOT use standard @solana/spl-token functions - they use wrong program IDs",
+      "⚠️ DO NOT connect to Solana mainnet/devnet - use GorbChain RPC only",
+      "⚠️ DO NOT use standard ATA functions - use manual token account creation",
+      "⚠️ You MUST have SOL on GorbChain (not regular Solana) to pay fees"
+    ],
+    "setup": [
+      "1. Install dependencies: npm install @solana/web3.js",
+      "2. Connect to GorbChain RPC: https://rpc.gorbchain.xyz",
+      "3. Use CUSTOM program IDs listed above",
+      "4. Create token accounts manually (bypass ATA)",
+      "5. Use manual transaction construction"
+    ],
+    "minting": [
+      "1. Create a new token account with SystemProgram.createAccount()",
+      "2. Initialize with Token-2022 InitializeAccount3 instruction (18)",
+      "3. Mint tokens with Token-2022 MintTo instruction (7)",
+      "4. All instructions must use the custom Token-2022 program ID"
+    ]
+  },
+  "examples": {
+    "connection": {
+      "javascript": "const connection = new Connection('https://rpc.gorbchain.xyz', 'confirmed');"
+    },
+    "programIds": {
+      "javascript": "const TOKEN_2022_PROGRAM = new PublicKey('2dwpmEaGB8euNCirbwWdumWUZFH3V91mbPjoFbWT24An');"
+    },
+    "tokenMint": {
+      "javascript": "const GSUP_MINT = new PublicKey('BNGkFwWsBZ71K5S9s5oqLeTfj55ghvHgPQRYCxd64eNU');"
+    }
+  },
+  "troubleshooting": {
+    "common_errors": {
+      "program_not_found": "You're using standard Solana program IDs instead of GorbChain custom ones",
+      "rpc_connection_failed": "You're connecting to Solana RPC instead of GorbChain RPC",
+      "insufficient_funds": "You need SOL on GorbChain, not regular Solana",
+      "ata_creation_failed": "Use manual token account creation instead of ATA"
+    },
+    "solutions": {
+      "always_use_custom_program_ids": true,
+      "always_use_gorbchain_rpc": true,
+      "manual_token_accounts_recommended": true,
+      "bypass_standard_spl_functions": true
+    }
+  },
+  "resources": {
+    "minting_script": "mint-to-gorbchain-token2022-guide.js",
+    "working_example": "transfer-token-2022-simple-working.js",
+    "documentation": "This config file contains everything needed"
+  }
+} 
