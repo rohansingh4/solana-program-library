@@ -1,0 +1,50 @@
+{
+  "name": "gorbchain-spl-token-sdk",
+  "version": "1.0.5",
+  "description": "Simplified SDK for creating, minting, and transferring SPL/Token-2022 tokens on GorbChain",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "example:create-token": "node examples/create-token.js",
+    "example:mint-tokens": "node examples/mint-tokens.js",
+    "example:transfer-tokens": "node examples/transfer-tokens.js"
+  },
+  "keywords": [
+    "solana",
+    "spl-token",
+    "token-2022",
+    "gorbchain",
+    "blockchain",
+    "cryptocurrency",
+    "defi"
+  ],
+  "author": "GorbChain Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freekill411/gorbchain-spl-token-sdk.git"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "gorbchain-spl-token-sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
